@@ -10,9 +10,43 @@ User.hasMany(Post, {
     foreignKey: 'user_id'
 });
 
-// post belongs to one user, but not many users
+// Post belongs to one User, but not many Users
 Post.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-module.exports = { User, Post };
+// Show Users Liked on single Post
+User.belongsToMany(Post, {
+    through: Like,
+    as: 'liked_posts',
+    foreignKey: 'user_id'
+  });
+  
+// Posts a single Users has liked
+  Post.belongsToMany(User, {
+    through: Like,
+    as: 'liked_posts',
+    foreignKey: 'post_id'
+  });
+
+// Vote belong to User
+Like.belongsTo(User, {
+    foreignKey: 'user_id'
+});
+
+// Vote belong to Post
+Like.belongsTo(Post, {
+    foreignKey: 'post_id'
+});
+  
+// User has many Likes
+User.hasMany(Like, {
+    foreignKey: 'user_id'
+});
+
+// Posts can have many Likes
+Post.hasMany(Like, {
+    foreignKey: 'post_id'
+});
+
+module.exports = { User, Post, Like };
