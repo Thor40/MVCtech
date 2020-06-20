@@ -2,7 +2,29 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // create Post model
-class Post extends Model {}
+class Post extends Model {
+    // static upLike(body, models) {
+    //     return models.like.create({
+    //         user_id: body.user_id,
+    //         post_id: body.post_id
+    //     }).then(() => {
+    //         return Post.findOne({
+    //             where: {
+    //                 id: body.post_id
+    //             },
+    //             attributes: [
+    //                 'id',
+    //                 'post_url',
+    //                 'title',
+    //                 'created_at',
+    //                 [
+    //                     sequelize.literal('(SELECT COUNT(*) FROM like WHERE post.id = like.post_id)'), 'like_count'
+    //                 ]
+    //             ]
+    //         });
+    //     });
+    // }
+}
 
 // create fields/columns for Post model
 Post.init(
