@@ -24,13 +24,13 @@ router.get('/:id', (req, res) => {
             {
               model: Post,
               attributes: ['id', 'title', 'post_url', 'created_at']
-            },
-            {
-              model: Post,
-              attributes: ['title'],
-              through: Like,
-              as: 'liked_posts'
             }
+            // {
+            //   model: Post,
+            //   attributes: ['title'],
+            //   through: Like,
+            //   as: 'liked_posts'
+            // }
           ]
     })
       .then(dbUserData => {
