@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MVCtech</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/public/stylesheets/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 
@@ -18,16 +18,16 @@
 
         {{#if loggedIn}}
 
-        <div class="collapse navbar-collapse" id="mediaNav">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item my-1">
-                  <a class="nav-link btn btn-outline-info" href="/dashboard">Dashboard</a>
-                </li>
-                <li class="nav-item my-1">
-                  <a class="nav-link btn btn-outline-info" id="logout" href="#">Logout</a>
-                </li>
-              </ul>
-          </div>
+        <div class="collapse navbar-collapse flex-grow-0" id="mediaNav">
+          <ul class="navbar-nav m-1">
+            <li class="nav-item my-1">
+              <a class="nav-link btn btn-outline-info" href="/dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item my-1">
+              <a class="nav-link btn btn-outline-info" id="logout" href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
         {{else}}
 
         <button type="button" class="btn btn-outline-primary m-2" data-toggle="modal" id="login" data-target="#loginModal">login</button>

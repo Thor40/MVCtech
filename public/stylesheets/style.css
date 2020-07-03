@@ -156,7 +156,8 @@
   .new-post-form input {
     width: 300px;
   }
-  
+
+
   .edit-post-form {
     margin-bottom: 5%;
   }
@@ -168,3 +169,10 @@
     padding: 1%;
     font-size: 110%;
   }
+  
+  /* NAV BAR EDITS */
+  .navbar-collapse .collapse {
+      flex-grow: 0;
+  }
+  /* NAV END */
+  
