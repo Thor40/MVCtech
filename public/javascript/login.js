@@ -51,11 +51,6 @@ async function loginFormHandler(event) {
     }
   };
 
-  $('#loginTab a').on('click', function (e) {
-    e.preventDefault()
-    $(this).tab('show')
-  })
-
   
  document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
  document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
