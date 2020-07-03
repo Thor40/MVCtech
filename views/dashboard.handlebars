@@ -1,20 +1,20 @@
-<section>
-   <h2>Create New Post</h2>
+<section class="card">
+   <h2 class="card-header">Create New Post</h2>
 
-   <form class="new-post-form">
-      <div>
-         <label for="post-title">Title of your Post</label>
-         <input type="text" id="post-title" name="post-title" />
+   <form class="card-body">
+      <div class="form-group col-6">
+         <label for="post-title">Title of your Post:</label>
+         <input class="form-control" type="text" id="post-title" name="post-title" placeholder="Example Title"/>
       </div>
-      <div>
-         <label for="post-url">Post URL</label>
-         <input type="text" id="post-url" name="post-url" />
+      <div class="form-group col-6">
+         <label for="post-url">Post URL:</label>
+         <input class="form-control" type="text" id="post-url" name="post-url" placeholder="https://www.exampleurl.com" />
       </div>
-      <div>
-         <label for="post-content">What is on your mind?</label>
-         <input type="text" id="post-url" name="post-content" />
+      <div class="form-group col-6">
+         <label for="post-content">Post Body:</label>
+         <textarea class="form-control" type="text" id="post-url" name="post-content" rows="3" placeholder="Whats on your Mind?"></textarea>
       </div>
-      <button type="submit" class="btn">Create</button>
+      <button type="submit" class="btn btn-outline-dark">Post</button>
    </form>
 </section>
 
