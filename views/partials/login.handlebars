@@ -1,0 +1,54 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-home" aria-selected="true">Login</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-register" role="tab" aria-controls="pills-profile" aria-selected="false">Register</a>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-home-tab">
+
+    <form class="login-form">
+        <div>
+          <label for="email-login">email:</label>
+          <input class="w-75" type="text" id="email-login" />
+        </div>
+        <div>
+          <label for="password-login">password:</label>
+          <input class="w-75" type="password" id="password-login" />
+        </div>
+        <div>
+          <button type="submit">login</button>
+        </div>
+    </form>
+
+  </div>
+  <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+    <form class="signup-form">
+      <div>
+        <label for="username-signup">username:</label>
+        <input class="w-75" type="text" id="username-signup" />
+      </div>
+      <div>
+        <label for="email-signup">email:</label>
+        <input class="w-75" type="text" id="email-signup" />
+      </div>
+      <div>
+        <label for="password-signup">password:</label>
+        <input class="w-75" type="password" id="password-signup" />
+      </div>
+      <div>
+        <button type="submit">signup</button>
+      </div>
+    </form>
+
+  </div>
+
+</div>
+
+
+
+
+<script src="/javascript/login.js"></script>

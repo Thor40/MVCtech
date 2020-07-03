@@ -6,22 +6,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MVCtech</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 
 <body>
-  <div class="wrapper">
     <header>
-      <h1>
-        <a href="/">MVCtech</a>
-      </h1>
+      <nav class="navbar navbar-fixed-top navbar-expand-md navbar-inverse bg-dark justify-content-space-around" role="navigation">
+          <div class="flex-grow-1">
+            <a class="navbar-brand" href="/">MVCtech</a>
+          </div>
+
+        {{#if loggedIn}}
+
+        <div class="collapse navbar-collapse" id="mediaNav">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item my-1">
+                  <a class="nav-link btn btn-outline-info" href="/dashboard">Dashboard</a>
+                </li>
+                <li class="nav-item my-1">
+                  <a class="nav-link btn btn-outline-info" id="logout" href="#">Logout</a>
+                </li>
+              </ul>
+          </div>
+        {{else}}
+
+        <button type="button" class="btn btn-outline-primary m-2" data-toggle="modal" id="login" data-target="#loginModal">login</button>
+
+        {{/if}}
+
+      </nav>
     </header>
-    <main>
-      {{{ body }}}
-    </main>
+    <div class="wrapper">
+      <main>
+
+        {{{ body }}}
+
+          <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="loginModal">Login or Register!</h5>
+                  </div>
+                  <div class="modal-body">
+                    {{> login}}
+                  </div>
+              </div>
+            </div>
+          </div>
+
+      </main>
     <footer>
       Created with love by: Thor40
     </footer>
   </div>
+  
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{else}}
+  <script src="/javascript/login.js"></script>
+  {{/if}}
+
+  {{#if loggedIn}}
+  <script src="/javascript/dashboard.js"></script>
+  {{else}}
+  <script src="/javascript/login.js"></script>
+  {{/if}}
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 
 </body>
 
