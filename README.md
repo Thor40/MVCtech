@@ -53,7 +53,7 @@ $ npm install connect-session-sequelize
 ```
 $ npm start
 ```
-The server should run on PORT 3004
+The server should run on PORT 3001
 --------------------
 Alternatively, visit the deployed Heroku site [MCVtech Heroku](https://dashboard.heroku.com/apps/mvc-tech)
 
