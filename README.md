@@ -60,7 +60,7 @@ Alternatively, visit the deployed Heroku site [MCVtech Heroku](https://dashboard
 ## Features
 --------------------
 ### Features include:
-* Shows all Categories, Products, Tags
-* Allows creation of new Categories, Products, Tags 
-* Allows update of previously created Categories, Products, Tags
-* Allows deletion of previously created Categories, Products, Tags
+* Allows Login or Register new User
+* Shows Dashboard that allows creation of new Post
+* User can Upvote, Comment, Edit, and Delete Posts
+* User can Log out
