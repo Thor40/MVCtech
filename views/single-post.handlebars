@@ -1,13 +1,13 @@
 {{> post-info post }}
 {{#if loggedIn}}
-<form class="comment-form">
+<form class="comment-form card card-body">
   <div>
-    <textarea id="comment-body" name="comment-body"></textarea>
+    <textarea class="col-6 form-control" id="comment-body" name="comment-body" rows="3" placeholder="Whats on your mind?"></textarea>
   </div>
 
-  <div>
-    <button type="submit" class="submit-btn">add comment</button>
-    <button type="button" class="upvote-btn">upvote</button>
+  <div class="m-2">
+    <button type="submit" class="submit-btn btn btn-outline-success">add comment</button>
+    <button type="button" class="upvote-btn btn btn-outline-info">upvote</button>
   </div>
 </form>
 {{/if}}
