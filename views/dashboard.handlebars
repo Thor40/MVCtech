@@ -19,14 +19,14 @@
 </section>
 
 {{#if posts.length}}
-<section>
-   <h2>Your Posts</h2>
-   <ol>
+<section class="card">
+   <h2 class="card-header">Your Posts</h2>
+   <ol class="card-body">
       {{#each posts as |post|}}
-         <li>
+         <ul class="">
             {{> post-info post }}
-            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-         </li>
+            <a href="/dashboard/edit/{{post.id}}" class="edit-link btn btn-outline-info">Edit post</a>
+         </ul>
       {{/each}}
    </ol>
 </section>
